@@ -1,1 +1,12 @@
-<p>navbar works!</p>
+<nav class="navbar navbar-expand-lg navbar-dark bg-success shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold" routerLink="/">
+      🌱 EcoColecta
+    </a>
+    <div class="navbar-nav ms-auto">
+      <a class="nav-link text-white" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Inicio</a>
+      <a class="nav-link text-white" routerLink="/puntos" routerLinkActive="active">Puntos de Acopio</a>
+      <a class="nav-link btn btn-light text-success ms-2 px-3 fw-semibold" routerLink="/registrar">Registrar Entrega</a>
+    </div>
+  </div>
+</nav>

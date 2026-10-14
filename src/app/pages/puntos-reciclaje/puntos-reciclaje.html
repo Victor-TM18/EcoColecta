@@ -1,22 +1,23 @@
-<div class="container my-4">
-  <h2 class="text-center mb-4">Puntos de Reciclaje Comunitario</h2>
-  <p class="text-center text-muted">Ubica el punto de acopio más cercano y lleva tus materiales reciclables.</p>
+<div class="container py-3">
+  <h2 class="text-success fw-bold text-center mb-2">Puntos de Acopio Comunitario</h2>
+  <p class="text-center text-muted mb-4">Consulta las ubicaciones municipales disponibles para dejar tus materiales.</p>
 
-  <div class="row mt-4">
+  <div class="row g-4">
     @for (punto of puntos; track punto.nombre) {
-      <div class="col-md-4 mb-3" >
-      <div class="card h-100 shadow-sm border-0">
-        <div class="card-body">
-          <h5 class="card-title text-success">{{ punto.nombre }}</h5>
-          <p class="card-text mb-1"><strong>📍 Ubicación:</strong> {{ punto.direccion }}</p>
-          <p class="card-text mb-1"><strong>⏰ Horario:</strong> {{ punto.horario }}</p>
-          <p class="card-text mb-2"><strong>♻️ Acepta:</strong> {{ punto.materiales }}</p>
-          <span class="badge" >
-            {{ punto.estado }}
-          </span>
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <h5 class="card-title text-success fw-bold mb-3">{{ punto.nombre }}</h5>
+            <p class="card-text mb-2"><strong>📍 Ubicación:</strong> {{ punto.direccion }}</p>
+            <p class="card-text mb-2"><strong>⏰ Horario:</strong> {{ punto.horario }}</p>
+            <p class="card-text mb-3"><strong>♻️ Materiales:</strong> {{ punto.materiales }}</p>
+            
+            <span class="badge px-3 py-2" [class.bg-success]="punto.estado === 'Disponible'" [class.bg-warning]="punto.estado !== 'Disponible'">
+              {{ punto.estado }}
+            </span>
+          </div>
         </div>
       </div>
-    </div>
-  }
+    }
   </div>
 </div>

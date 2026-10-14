@@ -1,17 +1,20 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-puntos-reciclaje',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './puntos-reciclaje.html',
-  styleUrls: ['./puntos-reciclaje.css']
+  styleUrl: './puntos-reciclaje.css'
 })
-export class PuntosReciclajeComponent {
+export class PuntosReciclaje {
   puntos = [
     {
       nombre: 'Almacén Principal Municipal',
       direccion: 'Av. Municipalidad 123',
       horario: 'Lunes a Viernes 8:00 am - 5:00 pm',
-      materiales: 'Plástico, Cartón, Vidrio, Metal',
+      materiales: 'Plástico PET, Cartón, Vidrio, Metal',
       estado: 'Disponible'
     },
     {

@@ -1,1 +1,49 @@
-<p>registrar-entrega works!</p>
+<div class="container py-3" style="max-width: 600px;">
+  <div class="card shadow-sm border-0 p-4">
+    <h3 class="text-success fw-bold text-center mb-3">Registrar Entrega de Reciclaje</h3>
+    <p class="text-muted text-center small mb-4">Completa los datos de la entrega realizada en el punto de acopio.</p>
+
+    @if (mensajeExito) {
+      <div class="alert alert-success text-center">
+        ✅ ¡Entrega registrada correctamente! Gracias por colaborar.
+      </div>
+    }
+
+    <form (ngSubmit)="guardarEntrega()">
+      <div class="mb-3">
+        <label class="form-label fw-semibold">Punto de Acopio</label>
+        <select class="form-select" [(ngModel)]="entrega.punto" name="punto" required>
+          <option value="" disabled selected>Selecciona el punto...</option>
+          <option value="Almacén Principal Municipal">Almacén Principal Municipal</option>
+          <option value="Oficina Centro">Oficina Centro</option>
+          <option value="Complejo Deportivo Sur">Complejo Deportivo Sur</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label fw-semibold">Tipo de Material</label>
+        <select class="form-select" [(ngModel)]="entrega.material" name="material" required>
+          <option value="" disabled selected>Selecciona el material...</option>
+          <option value="Plástico PET">Plástico PET</option>
+          <option value="Cartón / Papel">Cartón / Papel</option>
+          <option value="Vidrio">Vidrio</option>
+          <option value="Latas / Metal">Latas / Metal</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label fw-semibold">Cantidad Aprox. (en Kg)</label>
+        <input type="number" class="form-control" [(ngModel)]="entrega.cantidad" name="cantidad" placeholder="Ej. 2.5" step="0.1" required>
+      </div>
+
+      <div class="mb-4">
+        <label class="form-label fw-semibold">Nombre del Ciudadano (Opcional)</label>
+        <input type="text" class="form-control" [(ngModel)]="entrega.ciudadano" name="ciudadano" placeholder="Tu nombre">
+      </div>
+
+      <button type="submit" class="btn btn-success w-100 py-2 fw-semibold">
+        Guardar Registro
+      </button>
+    </form>
+  </div>
+</div>
