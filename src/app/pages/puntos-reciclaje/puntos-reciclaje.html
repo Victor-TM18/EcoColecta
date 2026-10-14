@@ -1,0 +1,22 @@
+<div class="container my-4">
+  <h2 class="text-center mb-4">Puntos de Reciclaje Comunitario</h2>
+  <p class="text-center text-muted">Ubica el punto de acopio más cercano y lleva tus materiales reciclables.</p>
+
+  <div class="row mt-4">
+    @for (punto of puntos; track punto.nombre) {
+      <div class="col-md-4 mb-3" >
+      <div class="card h-100 shadow-sm border-0">
+        <div class="card-body">
+          <h5 class="card-title text-success">{{ punto.nombre }}</h5>
+          <p class="card-text mb-1"><strong>📍 Ubicación:</strong> {{ punto.direccion }}</p>
+          <p class="card-text mb-1"><strong>⏰ Horario:</strong> {{ punto.horario }}</p>
+          <p class="card-text mb-2"><strong>♻️ Acepta:</strong> {{ punto.materiales }}</p>
+          <span class="badge" >
+            {{ punto.estado }}
+          </span>
+        </div>
+      </div>
+    </div>
+  }
+  </div>
+</div>
