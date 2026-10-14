@@ -1,59 +1,26 @@
-# EcoColecta
+# 🌿 EcoColecta - Plataforma Municipal de Reciclaje Comunitario
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.22.
+Solución digital desarrollada para el municipio local que facilita la gestión de puntos de reciclaje comunitario y el registro de entregas de materiales reciclables por parte de los ciudadanos.
 
-## Development server
+---
 
-To start a local development server, run:
+## 📚 Fase 1: Investigación Inicial y Conceptual
 
-```bash
-ng serve
-```
+### a. Evolución del Control de Versiones
+El control de versiones ha evolucionado para solucionar los problemas de respaldos manuales y conflictos en equipo:
+* **Sistemas Centralizados (ej. SVN):** Poseen un único servidor central que almacena todas las versiones de los archivos. Los desarrolladores descargan solo una porción del historial. Si el servidor central cae, nadie puede respaldar cambios ni trabajar en colaboración de manera óptima.
+* **Sistemas Distribuidos (ej. Git):** Cada computadora de los desarrolladores contiene un repositorio local completo con todo el historial de cambios. Esto permite trabajar sin conexión, realizar operaciones rápidas de forma local y ofrecer una alta redundancia y seguridad ante fallos del servidor remoto.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### b. Diferencias Conceptuales entre Git y GitHub
+* **Git:** Es una **herramienta de software de control de versiones** de código abierto que se ejecuta localmente en tu computadora para rastrear cambios, administrar ramas y fusionar código.
+* **GitHub:** Es una **plataforma web basada en la nube** que hospeda repositorios Git, facilitando la colaboración en equipo, la revisión de código (*Code Review*), tableros de gestión (*Projects*) y la automatización (*GitHub Actions*).
 
-## Code scaffolding
+### c. Configuración de Seguridad (Llaves SSH)
+Para garantizar una comunicación segura y autenticada entre el equipo de desarrollo local y los repositorios remotos en GitHub sin exponer contraseñas, se configuran llaves criptográficas SSH (Secure Shell) asociadas a las cuentas institucionales de los integrantes.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+---
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 🛠️ Stack Tecnológico
+* **Frontend:** Angular (Standalone Components)
+* **Estilos:** Bootstrap 5, CSS
+* **Control de Versiones:** Git & GitHub / GitHub Desktop
