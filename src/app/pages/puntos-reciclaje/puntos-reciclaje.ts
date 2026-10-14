@@ -29,7 +29,7 @@ export class PuntosReciclaje {
       direccion: 'Av. Los Deportes S/N',
       horario: 'Todos los días 7:00 am - 6:00 pm',
       materiales: 'Plástico PET y Latas de Aluminio',
-      estado: 'Disponible'
+      estado: 'Mantenimiento'
     }
   ];
 }
